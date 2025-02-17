@@ -2,7 +2,7 @@ require 'nokogiri'
 require 'httparty'
 
 class Scraper
- def self.scarpe(url)
+ def self.scrape(url)
     response= Httparty.get(url)
     doc = Nokogiri::HTML(response.body)
     {
